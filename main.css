@@ -1974,6 +1974,14 @@ div.paginate-container li:nth-last-child(2) a:after {
     width: 940px; /* 控制最大宽度，2列布局 */
     margin: 0 auto;
   }
+  /* 当屏幕宽度小于 860px 时，改为单列布局 */
+@media (max-width: 860px) {
+    .card-container {
+      flex-direction: column;
+      align-items: center; /* 居中单列 */
+      max-width: 100%;
+    }
+}
   
   .github-card {
     border: 1.5px solid #e5e7eb;
@@ -1986,7 +1994,7 @@ div.paginate-container li:nth-last-child(2) a:after {
     font-size: 14px;
     color: #333;
   }
-  
+
   .github-card a {
     color: #1a1a1a;
     text-decoration: none;
